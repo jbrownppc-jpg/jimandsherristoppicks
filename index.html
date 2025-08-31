@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jim & Sherri’s Top Picks</title>
@@ -20,6 +19,81 @@
       padding: 1rem;
       text-align: center;
     }
+    /* --- NAV BAR --- */
+    nav {
+      background: #00796b;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #004d40;
+    }
+    /* Dropdown menu */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 250px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+    .dropdown .product-card {
+      width: 100%;
+      border: none;
+      padding: 1rem;
+      text-align: left;
+    }
+    .dropdown .product-card img {
+      max-width: 60px;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    .dropdown .product-card p {
+      display: inline-block;
+      margin: 0;
+      font-weight: normal;
+    }
+    nav li:hover .dropdown {
+      display: block;
+    }
+    /* --- GENERAL PRODUCT CARDS --- */
+    .product-card {
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
+    .buy-button {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      background-color: #005f73;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
     .hero-banner {
       background: url('banner.jpg') center/cover no-repeat;
       height: 250px;
@@ -30,73 +104,23 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
       font-size: 2rem;
       font-weight: bold;
+      position: relative;
     }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.3);
     }
-    section {
-      margin-bottom: 2rem;
+    .hero-banner span {
+      position: relative;
+      z-index: 1;
     }
     footer {
       background: #eee;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-    }
-    .product-block {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      background: white;
-      margin-bottom: 1rem;
-    }
-    .message-block {
-      background: #e0f7fa;
-      padding: 1rem;
-      border-left: 5px solid #00796b;
-      font-style: italic;
-    }
-    .tab-button {
-      background-color: #00796b;
-      color: white;
-      border: none;
-      padding: 0.75rem 1rem;
-      margin-bottom: 1rem;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    .tab-content {
-      display: none;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      background: white;
-      margin-bottom: 1rem;
-    }
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .product-card {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      width: calc(50% - 1rem);
-      background: #fefefe;
-      text-align: center;
-    }
-    .product-card img {
-      max-width: 100%;
-      height: auto;
-    }
-    .buy-button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #005f73;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
     }
   </style>
 </head>
@@ -106,74 +130,63 @@
     <p>We’ve done the homework—so you don’t have to.</p>
   </header>
 
-  <!-- START HERO BANNER -->
-  <div class="hero-banner">Discover Your Favorites</div>
-  <!-- END HERO BANNER -->
-
-  <main>
-    <!-- START FEATURED PRODUCTS -->
-    <section>
-      <h2>Featured Products</h2>
-
-      <!-- ✅ NEW: Pet Essentials Dropdown Tab -->
-      <button class="tab-button" onclick="toggleTab('pet-essentials')">🐾 Pet Essentials</button>
-      <div id="pet-essentials" class="tab-content">
-        <h3>Top Picks for Hank, Heidi, Missy—and your crew</h3>
-        <div class="product-grid">
+  <!-- ✅ NAV BAR WITH DROPDOWNS -->
+  <nav>
+    <ul>
+      <li>
+        <a href="#">🐾 Pet Essentials</a>
+        <div class="dropdown">
           <div class="product-card">
             <img src="assets/img/pet1.jpg" alt="Comfy Pet Bed">
             <p>Comfy Pet Bed</p>
-            <a href="#" class="buy-button">Buy Now</a>
+            <br><a href="#" class="buy-button">Buy Now</a>
           </div>
-          <!-- Add more product cards here -->
+          <div class="product-card">
+            <img src="assets/img/pet2.jpg" alt="Chew Toy">
+            <p>Durable Chew Toy</p>
+            <br><a href="#" class="buy-button">Buy Now</a>
+          </div>
         </div>
-      </div>
+      </li>
+      <li>
+        <a href="#">🔌 Tech Tools</a>
+        <div class="dropdown">
+          <div class="product-card">
+            <img src="assets/img/tech1.jpg" alt="Smart Plug">
+            <p>WiFi Smart Plug</p>
+            <br><a href="#" class="buy-button">Buy Now</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#">🌿 Eco-Friendly</a>
+        <div class="dropdown">
+          <div class="product-card">
+            <img src="assets/img/eco1.jpg" alt="Reusable Bottle">
+            <p>Reusable Water Bottle</p>
+            <br><a href="#" class="buy-button">Buy Now</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
 
-      <!-- Existing Static Blocks -->
-      <div class="product-block">
-        <h3>🔌 Tech Tools</h3>
-        <p>Smart gadgets that save time and boost income.</p>
-        <a href="#">Explore Tech Picks</a>
-      </div>
+  <!-- HERO -->
+  <div class="hero-banner"><span>Discover Your Favorites</span></div>
 
-      <div class="product-block">
-        <h3>🌿 Eco-Friendly Finds</h3>
-        <p>Clean, green, and good for your wallet.</p>
-        <a href="#">Explore Eco Picks</a>
-      </div>
-    </section>
-    <!-- END FEATURED PRODUCTS -->
-
-    <!-- START OPTIONAL MESSAGE BLOCK -->
-    <!-- Uncomment below to display -->
-    <!--
-    <section class="message-block">
-      <p>“To everything there is a season…” — Ecclesiastes 3:1</p>
-      <p>We believe in purpose-driven picks. Whether you’re prepping or planting, we’ve got you covered.</p>
-    </section>
-    -->
-    <!-- END OPTIONAL MESSAGE BLOCK -->
-
-    <!-- START TRUST SECTION -->
+  <!-- TRUST SECTION -->
+  <main>
     <section>
       <h2>Why Trust Us?</h2>
       <p>We’re not influencers—we’re informed. Every product here is handpicked for quality, value, and impact. No fluff, no filler.</p>
     </section>
-    <!-- END TRUST SECTION -->
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Jim & Sherri’s Top Picks</p>
     <p><a href="https://jimandsherristoppicks.com" target="_blank">Visit Our Storefront</a> | <a href="mailto:jbrown.ppc@gmail.com">Contact Us</a></p>
     <p><em>We’ve done the homework—so you don’t have to.</em></p>
   </footer>
-
-  <!-- ✅ NEW: JavaScript for Tab Toggle -->
-  <script>
-    function toggleTab(id) {
-      const tab = document.getElementById(id);
-      tab.style.display = tab.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
 </body>
 </html>
