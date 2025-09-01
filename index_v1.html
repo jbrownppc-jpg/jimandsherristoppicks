@@ -1,194 +1,65 @@
-e is what I see: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jim & Sherri’s Top Picks</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #005f73;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    /* --- NAV BAR --- */
-    nav {
-      background: #00796b;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    nav li {
-      position: relative;
-    }
-    nav a {
-      display: block;
-      padding: 1rem 1.5rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      background: #004d40;
-    }
-    /* Dropdown menu */
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: white;
-      min-width: 250px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
-      z-index: 10;
-    }
-    .dropdown .product-card {
-      width: 100%;
-      border: none;
-      padding: 1rem;
-      text-align: left;
-    }
-    .dropdown .product-card img {
-      max-width: 60px;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
-    .dropdown .product-card p {
-      display: inline-block;
-      margin: 0;
-      font-weight: normal;
-    }
-    nav li:hover .dropdown {
-      display: block;
-    }
-    /* --- GENERAL PRODUCT CARDS --- */
-    .product-card {
-      border-bottom: 1px solid #eee;
-      background: #fff;
-    }
-    .buy-button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      background-color: #005f73;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .hero-banner {
-      background: url('banner.jpg') center/cover no-repeat;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-      font-size: 2rem;
-      font-weight: bold;
-      position: relative;
-    }
-    .hero-banner::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.3);
-    }
-    .hero-banner span {
-      position: relative;
-      z-index: 1;
-    }
-    footer {
-      background: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1 class="header-title">Jim & Sherri’s Top Picks</h1>
-    <p>We’ve done the homework—so you don’t have to.</p>
-  </header>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jim & Sherri’s Top Picks – Curated Finds</title>
+<meta name="description" content="Curated, tried-and-true picks from Jim & Sherri. Pet essentials, tech tools, eco-friendly gear—handpicked with care so you don’t have to guess." />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- ✅ NAV BAR WITH DROPDOWNS -->
-  <nav>
-    <ul>
-      <li>
-        <a href="#">🐾 Pet Essentials</a>
-        <div class="dropdown">
-          <div class="product-card">
-            <img src="assets/img/pet1.jpg" alt="Comfy Pet Bed">
-            <p>Comfy Pet Bed</p>
-            <br><a href="#" class="buy-button">Buy Now</a>
-          </div>
-          <div class="product-card">
-            <img src="assets/img/pet2.jpg" alt="Chew Toy">
-            <p>Durable Chew Toy</p>
-            <br><a href="#" class="buy-button">Buy Now</a>
-          </div>
-        </div>
-      </li>
-      <li>
-        <a href="#">🔌 Tech Tools</a>
-        <div class="dropdown">
-          <div class="product-card">
-            <img src="assets/img/tech1.jpg" alt="Smart Plug">
-            <p>WiFi Smart Plug</p>
-            <br><a href="#" class="buy-button">Buy Now</a>
-          </div>
-        </div>
-      </li>
-      <li>
-        <a href="#">🌿 Eco-Friendly</a>
-        <div class="dropdown">
-          <div class="product-card">
-            <img src="assets/img/eco1.jpg" alt="Reusable Bottle">
-            <p>Reusable Water Bottle</p>
-            <br><a href="#" class="buy-button">Buy Now</a>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </nav>
 
-  <!-- HERO -->
-  <div class="hero-banner"><span>Discover Your Favorites</span></div>
+<!-- Open Graph for nice sharing cards -->
+<meta property="og:title" content="Jim & Sherri’s Top Picks" />
+<meta property="og:description" content="We’ve done the homework—so you don’t have to." />
+<meta property="og:image" content="assets/img/social-card.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jimandsherristoppicks.com" />
 
-  <!-- TRUST SECTION -->
-  <main>
-    <section>
-      <h2>Why Trust Us?</h2>
-      <p>We’re not influencers—we’re informed. Every product here is handpicked for quality, value, and impact. No fluff, no filler.</p>
-    </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Jim & Sherri’s Top Picks</p>
-    <p><a href="https://jimandsherristoppicks.com" target="_blank">Visit Our Storefront</a> | <a href="mailto:jbrown.ppc@gmail.com">Contact Us</a></p>
-    <p><em>We’ve done the homework—so you don’t have to.</em></p>
-  </footer>
-</body>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+--ink:#0f172a; /* slate-900 */
+--muted:#475569; /* slate-600 */
+--bg:#f8fafc; /* slate-50 */
+--panel:#ffffff; /* white */
+--brand:#0ea5a4; /* teal-500 */
+--brand-dark:#0b7f7f; /* darker teal */
+--accent:#f59e0b; /* amber-500 */
+--ring:rgba(14,165,164,.25);
+--shadow:0 10px 25px rgba(2,6,23,.08);
+--radius:18px;
+--radius-sm:12px;
+--radius-xs:10px;
+--maxw:1200px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0; background:var(--bg); color:var(--ink);
+font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+line-height:1.6;
+}
+
+
+/* --- Top Announcement Bar --- */
+.announce{
+background: linear-gradient(90deg, var(--brand), var(--brand-dark));
+color:#fff; text-align:center; padding:.5rem 1rem; font-weight:600; font-size:.95rem;
+}
+
+
+/* --- Header / Hero --- */
+header.site{
+position:relative; overflow:hidden; isolation:isolate;
+background: radial-gradient(1200px 400px at 50% -10%, rgba(14,165,164,.35), transparent 60%) ,
+linear-gradient(180deg, #e6fffb 0%, #f8fafc 60%);
+}
+.hero{max-width:var(--maxw); margin:0 auto; padding:4.5rem 1.25rem 3rem; display:grid; gap:2rem; align-items:center; grid-template-columns:1.2fr .8fr}
+.brand{
+display:flex; align-items:center; gap:.75rem; margin-bottom:.5rem;
+}
 </html>
-
