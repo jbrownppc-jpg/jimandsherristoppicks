@@ -2,144 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jim & Sherri’s Top Picks</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jim & Sherri's Top Picks</title>
+  <meta name="description" content="Jim & Sherri's handpicked Amazon favorites for home, garden, pets, and more." />
+  <meta name="keywords" content="Amazon top picks, home gadgets, golf, pets, garden, Jim & Sherri" />
+  <meta property="og:title" content="Jim & Sherri's Top Picks" />
+  <meta property="og:description" content="Handpicked Amazon favorites for home, garden, pets, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourgithubpageurl.com" />
+  <meta property="og:image" content="https://yourgithubpageurl.com/images/preview.jpg" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #34495e;
+      padding: 0.5rem;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #27ae60;
+    }
+    section {
+      padding: 2rem;
+    }
+    section h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .product {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .product h3 {
+      font-size: 1.1rem;
+      margin: 0.75rem 0;
+    }
+    .product a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #27ae60;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    .product a:hover {
+      background-color: #219150;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ecf0f1;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer p {
+      margin: 0.5rem 0;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Jim & Sherri’s Top Picks</h1>
-    <p>Curated affiliate favorites for home, pets, tech, and more</p>
+    <h1>Jim & Sherri's Top Picks</h1>
+    <p>Handpicked favorites for home, garden, pets, and more</p>
   </header>
 
-  <!-- 🐾 Pet Favorites -->
-  <section class="dropdown">
-    <button class="dropbtn">🐾 Pet Favorites</button>
-    <div class="dropdown-content">
-      <a href="https://www.amazon.com/s?k=pet+toys&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Pet+Toy" alt="Pet Toy"/> Pet Toys
-      </a>
-      <a href="https://www.amazon.com/s?k=pet+beds&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Pet+Bed" alt="Pet Bed"/> Pet Beds
-      </a>
-      <a href="https://www.amazon.com/s?k=automatic+pet+feeder&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Feeder" alt="Feeder"/> Automatic Feeders
-      </a>
-      <a href="https://www.amazon.com/s?k=dog+leash&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Leash" alt="Leash"/> Dog Leashes
-      </a>
-      <a href="https://www.amazon.com/s?k=pet+grooming+kit&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Grooming" alt="Grooming"/> Grooming Kits
-      </a>
-      <a href="https://www.amazon.com/s?k=pet+carriers&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Carrier" alt="Carrier"/> Carriers
-      </a>
+  <nav>
+    <a href="#home">Home & Kitchen</a>
+    <a href="#golf">Golf & Outdoors</a>
+    <a href="#pets">Pet Favorites</a>
+    <a href="#garden">Garden & Tools</a>
+    <a href="#misc">Miscellaneous</a>
+  </nav>
+
+  <!-- Home & Kitchen -->
+  <section id="home">
+    <h2>🏡 Home & Kitchen</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/product1.jpg" alt="Tomato Slicer Pro kitchen gadget" loading="lazy" />
+        <h3>Tomato Slicer Pro</h3>
+        <a href="https://www.amazon.com/dp/B08XYZ1234?tag=jimmysstore-20" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+      </div>
     </div>
   </section>
 
-  <!-- 🧰 Tech & Tools -->
-  <section class="dropdown">
-    <button class="dropbtn">🧰 Tech & Tools</button>
-    <div class="dropdown-content">
-      <a href="https://www.amazon.com/s?k=mini+projector&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Projector" alt="Projector"/> Mini Projectors
-      </a>
-      <a href="https://www.amazon.com/s?k=power+bank&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=PowerBank" alt="PowerBank"/> Power Banks
-      </a>
-      <a href="https://www.amazon.com/s?k=smart+watch&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=SmartWatch" alt="Smart Watch"/> Smart Watches
-      </a>
-      <a href="https://www.amazon.com/s?k=wireless+earbuds&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Earbuds" alt="Earbuds"/> Wireless Earbuds
-      </a>
-      <a href="https://www.amazon.com/s?k=laptop+stand&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=LaptopStand" alt="Laptop Stand"/> Laptop Stands
-      </a>
-      <a href="https://www.amazon.com/s?k=bluetooth+speaker&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Speaker" alt="Speaker"/> Bluetooth Speakers
-      </a>
+  <!-- Golf & Outdoors -->
+  <section id="golf">
+    <h2>⛳ Golf & Outdoors</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/product2.jpg" alt="Golf Swing Trainer tool" loading="lazy" />
+        <h3>Golf Swing Trainer</h3>
+        <a href="https://www.amazon.com/dp/B07ABC5678?tag=jimmysstore-20" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+      </div>
     </div>
   </section>
 
-  <!-- 🌱 Eco-Friendly Essentials -->
-  <section class="dropdown">
-    <button class="dropbtn">🌱 Eco-Friendly Essentials</button>
-    <div class="dropdown-content">
-      <a href="https://www.amazon.com/s?k=reusable+grocery+bags&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Bags" alt="Bags"/> Reusable Bags
-      </a>
-      <a href="https://www.amazon.com/s?k=compost+bin&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Compost" alt="Compost"/> Compost Bins
-      </a>
-      <a href="https://www.amazon.com/s?k=eco+cleaning+products&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Cleaner" alt="Cleaner"/> Eco Cleaners
-      </a>
-      <a href="https://www.amazon.com/s?k=solar+lights&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=SolarLights" alt="Solar Lights"/> Solar Lights
-      </a>
-      <a href="https://www.amazon.com/s?k=bamboo+toothbrush&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Toothbrush" alt="Toothbrush"/> Bamboo Toothbrush
-      </a>
-      <a href="https://www.amazon.com/s?k=eco+water+bottle&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=WaterBottle" alt="Water Bottle"/> Eco Water Bottles
-      </a>
-    </div>
-  </section>
-
-  <!-- 🏡 Home & Cleaning -->
-  <section class="dropdown">
-    <button class="dropbtn">🏡 Home & Cleaning</button>
-    <div class="dropdown-content">
-      <a href="https://www.amazon.com/s?k=cordless+vacuum&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Vacuum" alt="Vacuum"/> Cordless Vacuums
-      </a>
-      <a href="https://www.amazon.com/s?k=air+purifier&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=AirPurifier" alt="Air Purifier"/> Air Purifiers
-      </a>
-      <a href="https://www.amazon.com/s?k=robot+mop&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=RobotMop" alt="Robot Mop"/> Robot Mops
-      </a>
-      <a href="https://www.amazon.com/s?k=smart+plug&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=SmartPlug" alt="Smart Plug"/> Smart Plugs
-      </a>
-      <a href="https://www.amazon.com/s?k=kitchen+gadget&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Gadget" alt="Gadget"/> Kitchen Gadgets
-      </a>
-      <a href="https://www.amazon.com/s?k=air+fryer&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=AirFryer" alt="Air Fryer"/> Air Fryers
-      </a>
-    </div>
-  </section>
-
-  <!-- 🚗 Auto Essentials -->
-  <section class="dropdown">
-    <button class="dropbtn">🚗 Auto Essentials</button>
-    <div class="dropdown-content">
-      <a href="https://www.amazon.com/s?k=car+vacuum&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=CarVacuum" alt="Car Vacuum"/> Car Vacuums
-      </a>
-      <a href="https://www.amazon.com/s?k=jump+starter&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=JumpStarter" alt="Jump Starter"/> Jump Starters
-      </a>
-      <a href="https://www.amazon.com/s?k=car+organizer&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Organizer" alt="Organizer"/> Car Organizers
-      </a>
-      <a href="https://www.amazon.com/s?k=car+phone+mount&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=PhoneMount" alt="Phone Mount"/> Phone Mounts
-      </a>
-      <a href="https://www.amazon.com/s?k=tire+inflator&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=Inflator" alt="Inflator"/> Tire Inflators
-      </a>
-      <a href="https://www.amazon.com/s?k=car+trash+can&tag=jimmysstore-20">
-        <img src="https://via.placeholder.com/150?text=TrashCan" alt="Trash Can"/> Trash Cans
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Jim & Sherri’s Top Picks. Affiliate links may earn us a small commission.</p>
-  </footer>
-</body>
-</html>
-
+  <!-- Pet Favorites -->
+  <section id="pets">
+    <h2>🐾 Pet Favorites</h2>
+    <div class="product-grid">
+      <div class="product">
