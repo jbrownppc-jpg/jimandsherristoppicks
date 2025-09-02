@@ -1,185 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jim & Sherri's Top Picks</title>
-  <meta name="description" content="Jim & Sherri's handpicked Amazon favorites for home, garden, pets, and more." />
-  <meta name="keywords" content="Amazon top picks, home gadgets, golf, pets, garden, Jim & Sherri" />
+  <meta name="description" content="Jim & Sherri's handpicked Amazon favorites for home, golf, pets, garden and more—curated with love and a keen eye for value." />
+  <meta name="keywords" content="Amazon top picks, home gadgets, golf gear, pet products, garden tools, Jim & Sherri" />
+
+  <!-- Social / Open Graph -->
   <meta property="og:title" content="Jim & Sherri's Top Picks" />
-  <meta property="og:description" content="Handpicked Amazon favorites for home, garden, pets, and more." />
+  <meta property="og:description" content="Handpicked Amazon favorites for home, golf, pets, garden, and more." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourgithubpageurl.com" />
-  <meta property="og:image" content="https://yourgithubpageurl.com/images/preview.jpg" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <meta property="og:url" content="https://YOUR_GITHUB_PAGES_URL_HERE" />
+  <meta property="og:image" content="https://YOUR_GITHUB_PAGES_URL_HERE/img/preview.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <!-- Performance tips -->
+  <link rel="preload" href="img/home-1.jpg" as="image" imagesrcset="img/home-1.jpg" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root{
+      --bg:#0b172a;            /* deep navy */
+      --card:#0f213f;          /* card base */
+      --brand:#21d07a;         /* accent green */
+      --brand-2:#7b61ff;       /* purple accent */
+      --text:#f7fafc;
+      --muted:#a8b2c1;
+      --btn:#1fd1a5;
+      --shadow:0 10px 25px rgba(0,0,0,.25);
+      --radius:18px;
     }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 10% -10%, #163050 0%, #0b172a 50%, #061025 100%);
+      color:var(--text);
+      line-height:1.55;
     }
-    nav {
-      position: sticky;
-      top: 0;
-      background: #34495e;
-      padding: 0.5rem;
-      text-align: center;
-      z-index: 1000;
+
+    /* Header + Ribbon */
+    .top-ribbon{
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color:#061025;
+      padding:.5rem 1rem;
+      text-align:center;
+      font-weight:700;
+      letter-spacing:.3px;
+      box-shadow: var(--shadow);
     }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
+    header{
+      position:relative;
+      padding:2.25rem 1rem 1.75rem;
+      text-align:center;
+      overflow:hidden;
     }
-    nav a:hover {
-      color: #27ae60;
+    header h1{
+      margin:0 0 .3rem;
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing:.3px;
     }
-    section {
-      padding: 2rem;
+    header p{margin:.25rem 0 0;color:var(--muted)}
+    .live-badge{
+      position:absolute; top:14px; right:14px;
+      background:linear-gradient(90deg,#27ef96,#0cebeb);
+      color:#06201b; font-weight:800; font-size:.85rem;
+      padding:.35rem .6rem; border-radius:999px;
+      box-shadow:0 6px 16px rgba(0,0,0,.25);
+      display:flex; align-items:center; gap:.4rem;
+      animation:pulse 1.8s infinite ease-in-out;
     }
-    section h2 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 1rem;
+    .live-dot{
+      width:8px; height:8px; border-radius:50%;
+      background:#0a2; box-shadow:0 0 12px #0a2;
+      animation:blink 1s infinite;
     }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+    @keyframes blink{50%{opacity:.35}}
+    @keyframes pulse{0%,100%{transform:translateY(0)}50%{transform:translateY(2px)}}
+
+    /* Nav */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background: rgba(6,16,37,.7);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .product {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .nav-inner{
+      max-width:1100px; margin:0 auto; padding:.6rem 1rem;
+      display:flex; align-items:center; justify-content:space-between; gap:1rem;
     }
-    .product:hover {
+    .brand{
+      display:flex; align-items:center; gap:.65rem; font-weight:800;
+      letter-spacing:.3px;
+    }
+    .brand .logo{
+      width:34px; height:34px; border-radius:10px;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      display:grid; place-items:center; color:#07131f; font-weight:900;
+      box-shadow: var(--shadow);
+    }
+    .menu{display:flex; gap:.75rem; align-items:center; flex-wrap:wrap}
+    .menu > li{list-style:none; position:relative}
+    .menu > li > a, .menu > li > button{
+      background:transparent; border:0; color:var(--text);
+      padding:.55rem .8rem; border-radius:10px;
+      font-weight:700; cursor:pointer;
+      transition:transform .15s ease, background .2s ease, color .2s ease;
+    }
+    .menu > li > a:hover, .menu > li > button:hover{
+      transform: translateY(-1px);
+      background:rgba(255,255,255,.06);
+    }
+    .caret{margin-left:.35rem; opacity:.7}
+
+    /* Dropdowns */
+    .dropdown{
+      position:absolute; left:0; top:110%;
+      background: #0e1e3b; border:1px solid rgba(255,255,255,.08);
+      border-radius:14px; padding:.4rem;
+      box-shadow: var(--shadow);
+      min-width:220px; display:none;
+    }
+    .menu > li:hover .dropdown{display:block}
+    .dropdown a{
+      display:block; padding:.55rem .7rem; border-radius:10px;
+      color:var(--text); text-decoration:none;
+    }
+    .dropdown a:hover{background:rgba(255,255,255,.06)}
+
+    /* Welcome banner */
+    .hero{
+      max-width:1100px; margin:1.2rem auto 1.6rem; padding:1.25rem;
+      border-radius:var(--radius);
+      background: linear-gradient(135deg, rgba(33,208,122,.15), rgba(123,97,255,.15));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow: var(--shadow);
+      display:flex; gap:1rem; align-items:center; justify-content:space-between; flex-wrap:wrap;
+    }
+    .hero h2{margin:.2rem 0 .4rem}
+    .cta{
+      display:inline-block; padding:.7rem 1rem; border-radius:12px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color:#061025; text-decoration:none; font-weight:900;
+      box-shadow: var(--shadow); transform: translateZ(0);
+      transition: transform .15s ease;
+    }
+    .cta:hover{transform: translateY(-2px)}
+
+    /* Sections */
+    section.cat{
+      max-width:1100px; margin:0 auto; padding:2rem 1rem;
+    }
+    .cat h3{
+      margin:0 0 1rem; font-size:clamp(22px,2.2vw,28px);
+      display:flex; align-items:center; gap:.6rem;
+      color:#e9eef7;
+    }
+    .subtle{color:var(--muted); font-size:.95rem; margin-top:-.2rem; margin-bottom:1rem}
+
+    /* Grid */
+    .grid{
+      display:grid; gap:1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card{
+      background: linear-gradient(180deg, #14274a 0%, #0f213f 100%);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:16px; overflow:hidden; position:relative;
+      transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow:0 6px 14px rgba(0,0,0,.25);
+    }
+    .card:hover{
       transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-color: rgba(33,208,122,.55);
+      box-shadow:0 18px 40px rgba(0,0,0,.35);
     }
-    .product img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
+    .thumb{
+      aspect-ratio: 4/3; width:100%; object-fit:cover; display:block;
+      filter:saturate(1.05) contrast(1.02);
+      transition: transform .25s ease;
     }
-    .product h3 {
-      font-size: 1.1rem;
-      margin: 0.75rem 0;
+    .card:hover .thumb{transform: scale(1.03)}
+    .card-body{padding:.85rem .9rem 1rem}
+    .card h4{margin:.2rem 0 .15rem; font-size:1.02rem}
+    .card p{margin:0; color:var(--muted); font-size:.92rem}
+    .btn{
+      margin-top:.7rem; display:inline-block; width:100%;
+      text-align:center; text-decoration:none; font-weight:800;
+      padding:.6rem .8rem; border-radius:12px;
+      color:#061025; background: linear-gradient(90deg, #20e3b2, #7b61ff);
+      box-shadow: var(--shadow); transition: transform .15s ease;
     }
-    .product a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #27ae60;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
+    .btn:hover{transform: translateY(-2px)}
+
+    /* Footer */
+    footer{
+      margin-top:2rem; padding:2rem 1rem; text-align:center;
+      color:var(--muted); border-top:1px solid rgba(255,255,255,.06);
+      background: rgba(6,16,37,.4);
     }
-    .product a:hover {
-      background-color: #219150;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #ecf0f1;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    footer p {
-      margin: 0.5rem 0;
+    .disclaimer{font-size:.92rem; margin:.2rem 0 0}
+    .tribute{margin-top:1rem; font-size:.9rem; opacity:.9}
+
+    /* Mobile tweaks */
+    @media (max-width:700px){
+      .menu{display:none}
+      .menu.open{display:flex}
+      .nav-toggle{
+        display:inline-flex; align-items:center; gap:.5rem;
+        background:transparent; border:1px solid rgba(255,255,255,.18);
+        color:var(--text); padding:.4rem .7rem; border-radius:10px; font-weight:800;
+      }
+      .dropdown{position:static; display:block; background:transparent; border:0; box-shadow:none; padding:0}
+      .dropdown a{padding:.45rem .6rem}
+      .menu > li{width:100%}
+      .menu > li > button{width:100%; text-align:left}
     }
   </style>
 </head>
 <body>
+  <div class="top-ribbon">Grand Opening Special: Fresh picks added daily — thanks for shopping with Jim &amp; Sherri!</div>
+
   <header>
-    <h1>Jim & Sherri's Top Picks</h1>
-    <p>Handpicked favorites for home, garden, pets, and more</p>
+    <div class="live-badge"><span class="live-dot"></span> LIVE</div>
+    <h1>Jim &amp; Sherri's Top Picks</h1>
+    <p>Handpicked favorites for home, golf, pets, garden &amp; more — fast, fun, and curated with care.</p>
   </header>
 
-  <nav>
-    <a href="#home">Home & Kitchen</a>
-    <a href="#golf">Golf & Outdoors</a>
-    <a href="#pets">Pet Favorites</a>
-    <a href="#garden">Garden & Tools</a>
-    <a href="#misc">Miscellaneous</a>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">J&amp;S</div> Jim &amp; Sherri
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.menu').classList.toggle('open')">
+        ☰ Menu
+      </button>
+      <ul class="menu" role="menubar">
+        <li>
+          <a href="#home" role="menuitem">Home &amp; Kitchen</a>
+        </li>
+        <li>
+          <button aria-haspopup="true">Golf &amp; Outdoors <span class="caret">▾</span></button>
+          <div class="dropdown" role="menu">
+            <a href="#golf">Featured</a>
+            <a href="#golf">Training</a>
+            <a href="#golf">Accessories</a>
+          </div>
+        </li>
+        <li>
+          <button aria-haspopup="true">Pet Favorites <span class="caret">▾</span></button>
+          <div class="dropdown" role="menu">
+            <a href="#pets">Cooling &amp; Comfort</a>
+            <a href="#pets">Toys</a>
+            <a href="#pets">Beds</a>
+          </div>
+        </li>
+        <li>
+          <a href="#garden" role="menuitem">Garden &amp; Tools</a>
+        </li>
+        <li>
+          <a href="#misc" role="menuitem">Misc</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- Home & Kitchen -->
-  <section id="home">
-    <h2>🏡 Home & Kitchen</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/product1.jpg" alt="Tomato Slicer Pro kitchen gadget" loading="lazy" />
-        <h3>Tomato Slicer Pro</h3>
-        <a href="https://www.amazon.com/dp/B08XYZ1234?tag=jimmysstore-20" target="_blank" rel="noopener noreferrer">View on Amazon</a>
-      </div>
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h2>Welcome! 🎉</h2>
+      <div class="subtle">Explore our handpicked Amazon favorites. Every click that turns into a purchase helps support our little family shop. Thank you!</div>
+    </div>
+    <a class="cta" href="#home">Browse Featured Picks ↓</a>
+  </div>
+
+  <!-- CATEGORY: HOME & KITCHEN -->
+  <section id="home" class="cat">
+    <h3>🏡 Home &amp; Kitchen</h3>
+    <div class="grid">
+      <!-- 5 cards -->
+      <article class="card">
+        <img class="thumb" src="img/home-1.jpg" alt="Tomato Slicer Pro kitchen gadget" loading="lazy">
+        <div class="card-body">
+          <h4>Tomato Slicer Pro</h4>
+          <p>Perfect, even slices in seconds.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=tomato+slicer+pro&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/home-2.jpg" alt="Electric milk frother" loading="lazy">
+        <div class="card-body">
+          <h4>Electric Milk Frother</h4>
+          <p>Barista foam at home.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=milk+frother&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/home-3.jpg" alt="Air fryer countertop oven" loading="lazy">
+        <div class="card-body">
+          <h4>Compact Air Fryer</h4>
+          <p>Crispy results with less oil.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=compact+air+fryer&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/home-4.jpg" alt="Magnetic spice rack set" loading="lazy">
+        <div class="card-body">
+          <h4>Magnetic Spice Rack</h4>
+          <p>Declutter &amp; organize instantly.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=magnetic+spice+rack&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/home-5.jpg" alt="Knife sharpener tool" loading="lazy">
+        <div class="card-body">
+          <h4>Knife Sharpener</h4>
+          <p>Safe, sharp, ready to prep.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=knife+sharpener&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Golf & Outdoors -->
-  <section id="golf">
-    <h2>⛳ Golf & Outdoors</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/product2.jpg" alt="Golf Swing Trainer tool" loading="lazy" />
-        <h3>Golf Swing Trainer</h3>
-        <a href="https://www.amazon.com/dp/B07ABC5678?tag=jimmysstore-20" target="_blank" rel="noopener noreferrer">View on Amazon</a>
-      </div>
+  <!-- CATEGORY: GOLF & OUTDOORS -->
+  <section id="golf" class="cat">
+    <h3>⛳ Golf &amp; Outdoors</h3>
+    <div class="grid">
+      <article class="card">
+        <img class="thumb" src="img/golf-1.jpg" alt="Golf swing trainer" loading="lazy">
+        <div class="card-body">
+          <h4>Golf Swing Trainer</h4>
+          <p>Build tempo &amp; consistency.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=golf+swing+trainer&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/golf-2.jpg" alt="Putting mat" loading="lazy">
+        <div class="card-body">
+          <h4>Indoor Putting Mat</h4>
+          <p>Practice anywhere, anytime.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=putting+mat&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/golf-3.jpg" alt="Rangefinder for golf" loading="lazy">
+        <div class="card-body">
+          <h4>Golf Rangefinder</h4>
+          <p>Pinpoint yardage every time.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=golf+rangefinder&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/golf-4.jpg" alt="Golf alignment sticks" loading="lazy">
+        <div class="card-body">
+          <h4>Alignment Sticks</h4>
+          <p>Dial in your setup.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=golf+alignment+sticks&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/golf-5.jpg" alt="Divot repair tool" loading="lazy">
+        <div class="card-body">
+          <h4>Divot Repair Tool</h4>
+          <p>Respect the greens.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=divot+repair+tool&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Pet Favorites -->
-  <section id="pets">
-    <h2>🐾 Pet Favorites</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/product3.jpg" alt="Pet Cooling Mat for dogs and cats" loading="lazy" />
-        <h3>Pet Cooling Mat</h3>
-        <a href="https://www.amazon.com/dp/B09PETCOOL?tag=jimmysstore-20" target="_blank" rel="noopener noreferrer">View on Amazon</a>
-      </div>
+  <!-- CATEGORY: PET FAVORITES -->
+  <section id="pets" class="cat">
+    <h3>🐾 Pet Favorites</h3>
+    <div class="grid">
+      <article class="card">
+        <img class="thumb" src="img/pet-1.jpg" alt="Pet cooling mat" loading="lazy">
+        <div class="card-body">
+          <h4>Cooling Mat</h4>
+          <p>Keep pups comfy in heat.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=pet+cooling+mat&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/pet-2.jpg" alt="Interactive dog toy" loading="lazy">
+        <div class="card-body">
+          <h4>Interactive Toy</h4>
+          <p>Smart fun for smart pets.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=interactive+dog+toy&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/pet-3.jpg" alt="Orthopedic pet bed" loading="lazy">
+        <div class="card-body">
+          <h4>Orthopedic Bed</h4>
+          <p>Great for older pets.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=orthopedic+pet+bed&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/pet-4.jpg" alt="Pet grooming kit" loading="lazy">
+        <div class="card-body">
+          <h4>Grooming Kit</h4>
+          <p>Less shedding, more cuddles.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=pet+grooming+kit&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/pet-5.jpg" alt="Raised pet bowls" loading="lazy">
+        <div class="card-body">
+          <h4>Raised Bowls</h4>
+          <p>Comfortable mealtime posture.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=raised+pet+bowls&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Garden & Tools -->
-  <section id="garden">
-    <h2>🌱 Garden & Tools</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/product4.jpg" alt="Garden Tool Set" loading="lazy" />
-        <h3>Garden Tool Set</h3>
-        <a href="https://www.amazon.com/dp/B09GARDEN01?tag=jimmysstore-20" target="_blank" rel="noopener noreferrer">View on Amazon</a>
-      </div>
+  <!-- CATEGORY: GARDEN & TOOLS -->
+  <section id="garden" class="cat">
+    <h3>🌱 Garden &amp; Tools</h3>
+    <div class="grid">
+      <article class="card">
+        <img class="thumb" src="img/garden-1.jpg" alt="Garden tool set" loading="lazy">
+        <div class="card-body">
+          <h4>Garden Tool Set</h4>
+          <p>Everything for weekend warriors.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=garden+tool+set&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/garden-2.jpg" alt="Expandable garden hose" loading="lazy">
+        <div class="card-body">
+          <h4>Expandable Hose</h4>
+          <p>Lightweight, no kinks.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=expandable+garden+hose&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/garden-3.jpg" alt="Pruning shears" loading="lazy">
+        <div class="card-body">
+          <h4>Pruning Shears</h4>
+          <p>Clean cuts for healthy plants.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=pruning+shears&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/garden-4.jpg" alt="Soil moisture meter" loading="lazy">
+        <div class="card-body">
+          <h4>Moisture Meter</h4>
+          <p>Water right—no guesswork.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=soil+moisture+meter&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/garden-5.jpg" alt="LED grow lights" loading="lazy">
+        <div class="card-body">
+          <h4>LED Grow Lights</h4>
+          <p>Happy plants, year-round.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=led+grow+lights&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Miscellaneous -->
-  <section id="misc">
-    <h2>⭐ Miscellaneous Picks</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/product5.jpg" alt="Handy LED Flashlight" loading="lazy" />
-        <h3>Handy LED Flashlight</h3>
-        <a href="https://www.amazon.com/dp/B09FLASH01?tag=jimmysstore-20" target="_blank" rel="noopener noreferrer">View on Amazon</a>
-      </div>
+  <!-- CATEGORY: MISC -->
+  <section id="misc" class="cat">
+    <h3>⭐ Miscellaneous Picks</h3>
+    <div class="grid">
+      <article class="card">
+        <img class="thumb" src="img/misc-1.jpg" alt="LED flashlight" loading="lazy">
+        <div class="card-body">
+          <h4>LED Flashlight</h4>
+          <p>Compact, bright, reliable.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=led+flashlight&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/misc-2.jpg" alt="Universal power bank" loading="lazy">
+        <div class="card-body">
+          <h4>Power Bank</h4>
+          <p>Charge on the go.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=power+bank&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/misc-3.jpg" alt="Multi-tool" loading="lazy">
+        <div class="card-body">
+          <h4>Multi-Tool</h4>
+          <p>Be ready for anything.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=multi+tool&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/misc-4.jpg" alt="Bluetooth tracker" loading="lazy">
+        <div class="card-body">
+          <h4>Bluetooth Tracker</h4>
+          <p>Never lose keys again.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=bluetooth+tracker&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <img class="thumb" src="img/misc-5.jpg" alt="Reusable cable ties" loading="lazy">
+        <div class="card-body">
+          <h4>Reusable Cable Ties</h4>
+          <p>Tidy tech in seconds.</p>
+          <a class="btn" target="_blank" rel="noopener noreferrer"
+             href="https://www.amazon.com/s?k=reusable+cable+ties&tag=jimmysstore-20">View on Amazon</a>
+        </div>
+      </article>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Jim & Sherri's Top Picks. All rights reserved.</p>
-    <p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+    <p>&copy; 2025 Jim &amp; Sherri's Top Picks. All rights reserved.</p>
+    <p class="disclaimer"><em>As an Amazon Associate we earn from qualifying purchases.</em></p>
+    <div class="tribute">Built with ❤️ by ACE for Jim &amp; Sherri.</div>
   </footer>
+
+  <!-- Light JS: mobile dropdown fallback -->
+  <script>
+    // Enable click-to-open submenus on mobile
+    document.querySelectorAll('.menu > li > button').forEach(btn=>{
+      btn.addEventListener('click', (e)=>{
+        const drop = btn.nextElementSibling;
+        const isOpen = drop && drop.style.display === 'block';
+        // close others
+        document.querySelectorAll('.dropdown').forEach(d=>d.style.display='none');
+        if(!isOpen && drop){ drop.style.display='block'; }
+      });
+    });
+    // Close dropdowns when clicking outside (mobile)
+    document.addEventListener('click', (e)=>{
+      if(!e.target.closest('.menu')) document.querySelectorAll('.dropdown').forEach(d=>d.style.display='none');
+    });
+  </script>
+
+  <!-- Schema.org (optional SEO boost) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Store",
+    "name":"Jim & Sherri's Top Picks",
+    "image":"https://YOUR_GITHUB_PAGES_URL_HERE/img/preview.jpg",
+    "url":"https://YOUR_GITHUB_PAGES_URL_HERE",
+    "description":"Handpicked Amazon favorites for home, golf, pets, garden and more.",
+    "brand":{"@type":"Brand","name":"J&S Picks"}
+  }
+  </script>
 </body>
 </html>
