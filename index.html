@@ -1,235 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jim & Sherri's Top Picks</title>
-  <meta name="description" content="Jim & Sherri's handpicked Amazon favorites for home, golf, pets, garden and more—curated with love and a keen eye for value." />
-  <meta name="keywords" content="Amazon top picks, home gadgets, golf gear, pet products, garden tools, Jim & Sherri" />
-
-  <!-- Social / Open Graph -->
+  <meta name="description" content="Jim & Sherri's handpicked Amazon favorites for home, garden, pets, golf, and more." />
   <meta property="og:title" content="Jim & Sherri's Top Picks" />
-  <meta property="og:description" content="Handpicked Amazon favorites for home, golf, pets, garden, and more." />
+  <meta property="og:description" content="Handpicked Amazon favorites for home, garden, pets, and more." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jbrownppc-jpg.github.io/jimandsherristoppicks" />
-  <meta property="og:image" content="https://jbrownppc-jpg.github.io/jimandsherristoppicks/img/preview.jpg" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-
-  <!-- Performance -->
-  <link rel="preload" href="img/home-1.jpg" as="image" />
-
+  <meta property="og:url" content="https://jbrownppc-jpg.github.io/jimandsherristoppicks/" />
+  <meta property="og:image" content="https://m.media-amazon.com/images/I/71E5zB1qbIL._AC_SL1500_.jpg" />
+  <link rel="icon" href="https://m.media-amazon.com/images/I/41FJcVX9R+L._SY300_.jpg" type="image/x-icon" />
   <style>
     :root {
-      --bg:#0b172a;
-      --card:#0f213f;
-      --brand:#21d07a;
-      --brand-2:#7b61ff;
-      --text:#f7fafc;
-      --muted:#a8b2c1;
-      --btn:#1fd1a5;
-      --shadow:0 10px 25px rgba(0,0,0,.25);
-      --radius:18px;
+      --primary: #27ae60;
+      --dark: #2c3e50;
+      --light: #f9f9f9;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 800px at 10% -10%, #163050 0%, #0b172a 50%, #061025 100%);
-      color: var(--text);
-      line-height: 1.55;
-    }
-
-    /* Header */
-    .top-ribbon {
-      background: linear-gradient(90deg, var(--brand), var(--brand-2));
-      color: #061025;
-      padding: .5rem 1rem;
-      text-align: center;
-      font-weight: 700;
-      box-shadow: var(--shadow);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light);
+      line-height: 1.4;
     }
     header {
-      padding: 2.25rem 1rem 1.75rem;
+      background: var(--dark);
+      color: #fff;
       text-align: center;
+      padding: 0.8rem;
     }
-    header h1 { font-size: clamp(28px, 3vw, 42px); }
-    header p { margin-top: .3rem; color: var(--muted); }
-
-    /* Live badge */
-    .live-badge {
-      position: absolute; top: 14px; right: 14px;
-      background: linear-gradient(90deg,#27ef96,#0cebeb);
-      padding:.35rem .6rem; border-radius:999px;
-      font-size:.85rem; font-weight:800; color:#06201b;
-      display:flex; align-items:center; gap:.4rem;
-      animation: pulse 1.8s infinite;
+    nav {
+      position: sticky;
+      top: 0;
+      background: #34495e;
+      text-align: center;
+      padding: 0.4rem;
+      z-index: 1000;
     }
-    .live-dot {
-      width:8px; height:8px; border-radius:50%;
-      background:#0a2; box-shadow:0 0 12px #0a2;
-      animation: blink 1s infinite;
+    nav a {
+      color: #fff;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
     }
-    @keyframes blink { 50% { opacity: .35; } }
-    @keyframes pulse { 0%,100%{transform:translateY(0)}50%{transform:translateY(2px)} }
-
-    /* Nav */
-    .nav { position: sticky; top: 0; background: rgba(6,16,37,.7); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.06); z-index:100; }
-    .nav-inner { max-width:1100px; margin:0 auto; padding:.6rem 1rem; display:flex; align-items:center; justify-content:space-between; }
-    .brand { display:flex; align-items:center; gap:.65rem; font-weight:800; }
-    .brand .logo {
-      width:34px; height:34px; border-radius:10px;
-      background:linear-gradient(135deg, var(--brand), var(--brand-2));
-      display:grid; place-items:center; color:#07131f; font-weight:900;
+    nav a:hover {
+      color: var(--primary);
     }
-    .menu { display:flex; gap:.75rem; align-items:center; }
-    .menu > li { list-style:none; position:relative; }
-    .menu > li > a, .menu > li > button {
-      border:0; background:none; color:var(--text);
-      padding:.55rem .8rem; border-radius:10px; font-weight:700; cursor:pointer;
-      transition:.2s ease;
+    section {
+      padding: 1rem;
     }
-    .menu > li > a:hover, .menu > li > button:hover {
-      background: rgba(255,255,255,.08); transform: translateY(-1px);
+    section h2 {
+      text-align: center;
+      margin-bottom: 0.8rem;
+      color: var(--dark);
+      font-size: 1.2rem;
     }
-
-    /* Dropdown */
-    .dropdown {
-      position:absolute; top:110%; left:0;
-      background:#0e1e3b; border-radius:14px;
-      box-shadow: var(--shadow); display:none;
-      padding:.6rem; min-width:240px;
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.8rem;
     }
-    .menu > li:hover .dropdown { display:block; }
-    .dropdown a {
-      display:flex; align-items:center; gap:.6rem;
-      padding:.55rem; border-radius:10px; color:var(--text);
-      transition:.2s ease; text-decoration:none;
+    .product {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.6rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .dropdown a img {
-      width:36px; height:36px; border-radius:8px; object-fit:cover;
-      transition: transform .2s ease;
+    .product:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
-    .dropdown a:hover { background:rgba(255,255,255,.06); }
-    .dropdown a:hover img { transform:scale(1.1); }
-
-    /* Hero */
-    .hero {
-      max-width:1100px; margin:1.2rem auto; padding:1.25rem;
-      background: linear-gradient(135deg, rgba(33,208,122,.15), rgba(123,97,255,.15));
-      border:1px solid rgba(255,255,255,.08); border-radius: var(--radius);
-      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
+    .product img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 4px;
     }
-    .cta {
-      padding:.7rem 1rem; border-radius:12px;
-      background: linear-gradient(90deg, var(--brand), var(--brand-2));
-      color:#061025; font-weight:900; text-decoration:none;
-      transition:.2s ease;
+    .product h3 {
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
     }
-    .cta:hover { transform: translateY(-2px); }
-
-    /* Category sections */
-    section.cat { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
-    .cat h3 { font-size:clamp(22px,2.2vw,28px); margin-bottom:1rem; }
-    .grid { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .card {
-      background: linear-gradient(180deg,#14274a,#0f213f);
-      border-radius:16px; overflow:hidden; transition:.2s ease; box-shadow:0 6px 14px rgba(0,0,0,.25);
+    .product a {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.85rem;
     }
-    .card:hover { transform: translateY(-5px); box-shadow:0 18px 40px rgba(0,0,0,.35); border-color:var(--brand); }
-    .thumb { width:100%; aspect-ratio:4/3; object-fit:cover; transition:.25s ease; }
-    .card:hover .thumb { transform: scale(1.05); }
-    .card-body { padding:.9rem; }
-    .btn {
-      margin-top:.7rem; display:block; text-align:center;
-      padding:.6rem .8rem; border-radius:12px; font-weight:800;
-      background:linear-gradient(90deg,#20e3b2,#7b61ff); color:#061025;
-      transition:.2s ease; text-decoration:none;
+    .product a:hover {
+      background: #219150;
     }
-    .btn:hover { transform:translateY(-2px); }
-
-    /* Footer */
-    footer { margin-top:2rem; padding:2rem 1rem; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,.06); }
-
-    /* Mobile */
-    @media (max-width:700px) {
-      .menu { display:none; flex-direction:column; }
-      .menu.open { display:flex; }
-      .nav-toggle {
-        background:none; border:1px solid rgba(255,255,255,.2);
-        padding:.4rem .7rem; border-radius:10px; color:var(--text);
-      }
-      .dropdown { position:static; display:block; background:none; box-shadow:none; padding:0; }
-      .dropdown a img { display:none; }
+    footer {
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 0.8rem;
+      background: #ecf0f1;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="top-ribbon">Grand Opening Special: Fresh picks added daily — thanks for shopping with Jim &amp; Sherri!</div>
-
   <header>
-    <div class="live-badge"><span class="live-dot"></span> LIVE</div>
-    <h1>Jim &amp; Sherri's Top Picks</h1>
-    <p>Handpicked favorites for home, golf, pets, garden &amp; more.</p>
+    <h1>Jim & Sherri's Top Picks</h1>
+    <p>Handpicked favorites for your home, pets, garden, and lifestyle</p>
   </header>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand"><div class="logo">J&amp;S</div> Jim &amp; Sherri</div>
-      <button class="nav-toggle" onclick="document.querySelector('.menu').classList.toggle('open')">☰ Menu</button>
-      <ul class="menu">
-        <li><a href="#home">Home &amp; Kitchen</a></li>
-        <li>
-          <button>Golf &amp; Outdoors ▾</button>
-          <div class="dropdown">
-            <a href="#golf"><img src="img/golf-1.jpg" alt=""> Featured</a>
-            <a href="#golf"><img src="img/golf-2.jpg" alt=""> Training</a>
-            <a href="#golf"><img src="img/golf-3.jpg" alt=""> Accessories</a>
-          </div>
-        </li>
-        <li>
-          <button>Pet Favorites ▾</button>
-          <div class="dropdown">
-            <a href="#pets"><img src="img/pet-1.jpg" alt=""> Cooling &amp; Comfort</a>
-            <a href="#pets"><img src="img/pet-2.jpg" alt=""> Toys</a>
-            <a href="#pets"><img src="img/pet-3.jpg" alt=""> Beds</a>
-          </div>
-        </li>
-        <li><a href="#garden">Garden &amp; Tools</a></li>
-        <li><a href="#misc">Misc</a></li>
-      </ul>
-    </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#golf">Golf</a>
+    <a href="#pets">Pets</a>
+    <a href="#garden">Garden</a>
+    <a href="#misc">Misc</a>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h2>Welcome! 🎉</h2>
-      <p>Every purchase helps support our little family shop. Thank you!</p>
+  <!-- Home & Kitchen -->
+  <section id="home">
+    <h2>🏡 Home & Kitchen</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61zIGP6ZhIL._AC_SL1500_.jpg" alt="Air Fryer Oven">
+        <h3>Air Fryer Oven</h3>
+        <a href="https://www.amazon.com/dp/B07VWVK8QV?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71bD9x4L1PL._AC_SL1500_.jpg" alt="Instant Pot Duo">
+        <h3>Instant Pot Duo</h3>
+        <a href="https://www.amazon.com/dp/B08PQ2KWHS?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81j0oU5fJgL._AC_SL1500_.jpg" alt="KitchenAid Mixer">
+        <h3>KitchenAid Mixer</h3>
+        <a href="https://www.amazon.com/dp/B07TYQ97VQ?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61pV07jM5aL._AC_SL1500_.jpg" alt="Keurig Coffee Maker">
+        <h3>Keurig Coffee Maker</h3>
+        <a href="https://www.amazon.com/dp/B07P5XG6GT?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81Cw5hIqZqL._AC_SL1500_.jpg" alt="Ninja Blender">
+        <h3>Ninja Blender</h3>
+        <a href="https://www.amazon.com/dp/B0858W8Q8M?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
     </div>
-    <a href="#home" class="cta">Browse Picks ↓</a>
-  </div>
+  </section>
 
-  <!-- Sections (Home, Golf, Pets, Garden, Misc) remain unchanged -->
-  <!-- Keep all your product cards with Amazon affiliate links -->
+  <!-- Golf & Outdoors -->
+  <section id="golf">
+    <h2>⛳ Golf & Outdoors</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61n9Ro4nVxL._AC_SL1200_.jpg" alt="Callaway Golf Balls">
+        <h3>Callaway Golf Balls</h3>
+        <a href="https://www.amazon.com/dp/B07YXN2FRX?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71E5zB1qbIL._AC_SL1500_.jpg" alt="Golf Swing Trainer">
+        <h3>Golf Swing Trainer</h3>
+        <a href="https://www.amazon.com/dp/B07H4R5G8N?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71eUwDk8z3L._AC_SL1500_.jpg" alt="Titleist Golf Glove">
+        <h3>Titleist Golf Glove</h3>
+        <a href="https://www.amazon.com/dp/B07NDHS4S9?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/91M0YoY5PlL._AC_SL1500_.jpg" alt="Rangefinder for Golf">
+        <h3>Rangefinder for Golf</h3>
+        <a href="https://www.amazon.com/dp/B09F3K9ZV8?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81GZK8qQTwL._AC_SL1500_.jpg" alt="Golf Club Set">
+        <h3>Golf Club Set</h3>
+        <a href="https://www.amazon.com/dp/B08JH5NTHC?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pet Favorites -->
+  <section id="pets">
+    <h2>🐾 Pet Favorites</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81d1kQx4pWL._AC_SL1500_.jpg" alt="Orthopedic Dog Bed">
+        <h3>Orthopedic Dog Bed</h3>
+        <a href="https://www.amazon.com/dp/B01LYFC1WL?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71g19tUjMoL._AC_SL1500_.jpg" alt="Automatic Pet Feeder">
+        <h3>Automatic Pet Feeder</h3>
+        <a href="https://www.amazon.com/dp/B085WZT7W2?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71Q+oWkD8IL._AC_SL1500_.jpg" alt="Pet Cooling Mat">
+        <h3>Pet Cooling Mat</h3>
+        <a href="https://www.amazon.com/dp/B08VNPW2LZ?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81eYkO9CxNL._AC_SL1500_.jpg" alt="Cat Tree Tower">
+        <h3>Cat Tree Tower</h3>
+        <a href="https://www.amazon.com/dp/B083M6K9XB?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/91j3oRZ8nqL._AC_SL1500_.jpg" alt="Pet Grooming Kit">
+        <h3>Pet Grooming Kit</h3>
+        <a href="https://www.amazon.com/dp/B07R68F7RY?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Garden & Tools -->
+  <section id="garden">
+    <h2>🌱 Garden & Tools</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71L5c1EDk0L._AC_SL1500_.jpg" alt="Garden Tool Set">
+        <h3>Garden Tool Set</h3>
+        <a href="https://www.amazon.com/dp/B08HZ48M43?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81PAuHNJZcL._AC_SL1500_.jpg" alt="Electric Pressure Washer">
+        <h3>Electric Pressure Washer</h3>
+        <a href="https://www.amazon.com/dp/B08W5G3V4N?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81FWjtvVjnL._AC_SL1500_.jpg" alt="Cordless Leaf Blower">
+        <h3>Cordless Leaf Blower</h3>
+        <a href="https://www.amazon.com/dp/B084HJW6PZ?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71H5sfXuoCL._AC_SL1500_.jpg" alt="Raised Garden Bed">
+        <h3>Raised Garden Bed</h3>
+        <a href="https://www.amazon.com/dp/B08ZN7FLV5?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81zkM6lJpoL._AC_SL1500_.jpg" alt="Hose Reel Cart">
+        <h3>Hose Reel Cart</h3>
+        <a href="https://www.amazon.com/dp/B07Q3T9QGZ?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Miscellaneous -->
+  <section id="misc">
+    <h2>⭐ Miscellaneous Picks</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71mEsEsYhNL._AC_SL1500_.jpg" alt="LED Flashlight">
+        <h3>LED Flashlight</h3>
+        <a href="https://www.amazon.com/dp/B07ZQ1F3M3?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81jG8OAJhtL._AC_SL1500_.jpg" alt="Portable Power Bank">
+        <h3>Portable Power Bank</h3>
+        <a href="https://www.amazon.com/dp/B08P7YKT9X?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71qV0dA9ebL._AC_SL1500_.jpg" alt="Noise Cancelling Headphones">
+        <h3>Noise Cancelling Headphones</h3>
+        <a href="https://www.amazon.com/dp/B08N5WRWNW?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71r5ngAYjYL._AC_SL1500_.jpg" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <a href="https://www.amazon.com/dp/B08HR9D8WG?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71i9NtIytDL._AC_SL1500_.jpg" alt="Bluetooth Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <a href="https://www.amazon.com/dp/B07QK2SPP7?tag=jimmysstore-20" target="_blank">View on Amazon</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Jim &amp; Sherri's Top Picks. All rights reserved.</p>
-    <p><em>As an Amazon Associate we earn from qualifying purchases.</em></p>
-    <div>Built with ❤️ by ACE for Jim &amp; Sherri.</div>
+    <p>&copy; 2025 Jim & Sherri's Top Picks. All rights reserved.</p>
+    <p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
   </footer>
-
-  <script>
-    document.querySelectorAll('.menu > li > button').forEach(btn=>{
-      btn.addEventListener('click', e=>{
-        const drop = btn.nextElementSibling;
-        drop.style.display = drop.style.display==='block' ? 'none':'block';
-      });
-    });
-  </script>
 </body>
 </html>
