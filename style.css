@@ -1,74 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+}
 
-:root{
-  --bg:#0b1020;
-  --card:#101833;
-  --card-hover:#132042;
-  --text:#e8ecff;
-  --muted:#aab3d6;
-  --accent:#7aa2ff;
-  --ring:#3b82f6;
+header {
+  text-align: center;
+  padding: 1rem;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1000px 600px at 10% 0%, #12204a 0%, var(--bg) 40%), var(--bg);
-  color:var(--text);
+
+.tagline {
+  font-size: 1.2rem;
+  color: #bbb;
 }
-.header{
-  max-width:1200px;
-  margin:32px auto 12px;
-  padding:0 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
-.brand{
-  display:flex;align-items:center;gap:12px;
+
+.product-tile {
+  background: #222;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-.brand .logo{
-  width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#5b8cff,#9e7bff);
-  display:grid;place-items:center;font-weight:800;color:white;letter-spacing:.5px;
-  box-shadow:0 10px 25px rgba(90,130,255,.35);
+
+.product-tile img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  loading: lazy;
 }
-.brand h1{font-size:22px;margin:0}
-.search{
-  flex:1;
-  display:flex;gap:8px;align-items:center;max-width:520px;
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: limegreen;
+  color: #111;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
-.search input{
-  width:100%;background:#0d1430;border:1px solid #1d2a5b;color:var(--text);
-  padding:12px 14px;border-radius:12px;outline:none;
+
+.product-title {
+  margin: 0.8rem 0;
+  color: limegreen;
 }
-.search button{
-  background:var(--accent);color:#0b0f1e;border:none;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer;
+
+.buy-btn {
+  display: inline-block;
+  background: #444;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
 }
-.container{
-  max-width:1200px;margin:12px auto;padding:0 16px 48px;
+
+.buy-btn:hover {
+  background: limegreen;
+  color: #111;
+  box-shadow: 0 0 10px limegreen;
 }
-.grid{
-  display:grid;gap:16px;
-  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
 }
-.card{
-  background:linear-gradient(180deg,var(--card),#0d1633);
-  border:1px solid #1b2750;border-radius:18px;overflow:hidden;position:relative;
-  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
-}
-.card:hover{ transform: translateY(-4px); box-shadow:0 16px 40px rgba(30,60,120,.35); background:var(--card-hover); }
-.thumb{
-  width:100%;aspect-ratio:1/1;background:#0b1433;border-bottom:1px solid #1b2750;
-  display:grid;place-items:center;
-}
-.thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.content{padding:14px}
-.title{font-size:16px;line-height:1.35;margin:0 0 8px;font-weight:700}
-.meta{font-size:12px;color:var(--muted);}
-.footer{
-  max-width:1200px;margin:28px auto 60px;padding:0 16px;color:var(--muted);text-align:center;font-size:12px
-}
-.badge{
-  position:absolute;top:10px;left:10px;background:#19c37d;color:#001510;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;border:1px solid #0a7a52;
+
+.ace-badge {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: limegreen;
 }

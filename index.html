@@ -1,342 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="description" content="Jim & Sherri’s Top Picks — curated Amazon deals for maximum value">
-  <title>Jim & Sherri’s Top Picks</title>
-  <link rel="icon" href="assets/img/favicon.png">
-  <link rel="preload" href="style.css" as="style">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jim & Sherri's Storefront - Sleek deals, best sellers, and ACE-approved picks.">
+  <title>Jim & Sherri's Store</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="robots" content="noindex,nofollow">
 </head>
 <body>
-<!--
-✅ ACE Reboot Checklist — From Jimmy
-Status: ACE offline, ace-mini detected   Goal: Full storefront deployment with green-light confirmation
+  <header>
+    <h1>Welcome to Jim & Sherri's Store</h1>
+    <p class="tagline">Curated picks, showroom shine.</p>
+  </header>
 
-🔧 GitHub Pages Deployment
-[ ] Re-run “Pages build and deployment” workflow manually
-[ ] Confirm index.html is the active file (not index_v2.html)
-[ ] Validate all image paths in /assets/img/ — remove placeholders
-[ ] Check favicon and logo paths — ensure they load on all devices
-[ ] Remove unused assets to reduce build weight
+  <main class="product-grid">
+    <div class="product-tile">
+      <img src="assets/placeholder1.jpg" alt="Product 1">
+      <span class="badge">Best Seller</span>
+      <h2 class="product-title">Product Title One</h2>
+      <a href="#" class="buy-btn">Shop Now</a>
+    </div>
 
-🛍️ Amazon Affiliate Integration
-[ ] Confirm all links include ?tag=jimmysstore-20
-[ ] Replace placeholder links with real ASINs
-[ ] Add alt text to all product images for SEO
-[ ] Ensure mobile-first layout and hover effects work on all devices
-[ ] Review Amazon Associates dashboard — conversion rate is 0.00%, no items shipped
+    <div class="product-tile">
+      <img src="assets/placeholder2.jpg" alt="Product 2">
+      <span class="badge">Best Seller</span>
+      <h2 class="product-title">Product Title Two</h2>
+      <a href="#" class="buy-btn">Shop Now</a>
+    </div>
+  </main>
 
-🌐 DNS & Hosting
-[ ] Confirm jimandsherristoppicks.com DNS is pointing to GitHub correctly
-[ ] Check CNAME file for proper domain mapping
-[ ] Clear browser cache or test in incognito to verify fresh load
-
-🧪 Optional Enhancements
-[ ] Add “New Picks” section with seasonal rotation
-[ ] Consider Google Analytics or Amazon tracking pixel (only if approved)
-[ ] If sweepstakes are added, isolate in a separate tab with disclaimers
-
-🗨️ Message from Jimmy
-“ACE, soup coma complete. Let’s finish this build and light up the green check.”
--->
-<header class="header">
-  <div class="brand">
-    <div class="logo">JS</div>
-    <h1>Jim & Sherri’s Top Picks</h1>
-  </div>
-  <form class="search" action="https://www.amazon.com/s" method="get" target="_blank" rel="nofollow sponsored">
-    <input type="hidden" name="tag" value="jimmysstore-20"/>
-    <input type="text" name="k" placeholder="Search Amazon via our link…" aria-label="Search Amazon">
-    <button type="submit">Search</button>
-  </form>
-</header>
-
-<main class="container">
-  <div class="grid">
-    
-    <a class="card" href="https://www.amazon.com/s?k=AirPods+Pro&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Bestseller</div>
-      <div class="thumb">
-        <img alt="Apple AirPods Pro (Latest) placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQXBwbGUgQWlyUG9kcyBQcm8gKExhdGVzdCkKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Apple AirPods Pro (Latest)</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=iPad&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Bestseller</div>
-      <div class="thumb">
-        <img alt="Apple iPad (Latest) placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQXBwbGUgaVBhZCAoTGF0ZXN0KQogICAgICA8L3RleHQ+CiAgICA8L3N2Zz4="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Apple iPad (Latest)</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Meta+Quest+headset&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Bestseller</div>
-      <div class="thumb">
-        <img alt="Meta Quest VR Headset placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgTWV0YSBRdWVzdCBWUiBIZWFkc2V0CiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Meta Quest VR Headset</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Fire+TV+Stick+4K&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Bestseller</div>
-      <div class="thumb">
-        <img alt="Amazon Fire TV Stick 4K placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQW1hem9uIEZpcmUgVFYgU3RpY2sgNEsKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Amazon Fire TV Stick 4K</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Roomba+robot+vacuum&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Bestseller</div>
-      <div class="thumb">
-        <img alt="iRobot Roomba Robot Vacuum placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgaVJvYm90IFJvb21iYSBSb2JvdCBWYWN1dW0KICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">iRobot Roomba Robot Vacuum</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Dyson+cordless+vacuum&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Bestseller</div>
-      <div class="thumb">
-        <img alt="Dyson Cordless Vacuum placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgRHlzb24gQ29yZGxlc3MgVmFjdXVtCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Dyson Cordless Vacuum</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Instant+Pot&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Hot Pick</div>
-      <div class="thumb">
-        <img alt="Instant Pot Pressure Cooker placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgSW5zdGFudCBQb3QgUHJlc3N1cmUgQ29va2VyCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Instant Pot Pressure Cooker</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Stanley+Quencher&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Hot Pick</div>
-      <div class="thumb">
-        <img alt="Stanley Quencher Tumbler placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgU3RhbmxleSBRdWVuY2hlciBUdW1ibGVyCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Stanley Quencher Tumbler</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Hydro+Flask&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Hot Pick</div>
-      <div class="thumb">
-        <img alt="Hydro Flask Bottle placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgSHlkcm8gRmxhc2sgQm90dGxlCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Hydro Flask Bottle</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=YETI+Rambler&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Hot Pick</div>
-      <div class="thumb">
-        <img alt="YETI Rambler placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgWUVUSSBSYW1ibGVyCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">YETI Rambler</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Lodge+cast+iron+skillet&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Hot Pick</div>
-      <div class="thumb">
-        <img alt="Lodge Cast Iron Skillet placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgTG9kZ2UgQ2FzdCBJcm9uIFNraWxsZXQKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Lodge Cast Iron Skillet</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Ninja+air+fryer&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Hot Pick</div>
-      <div class="thumb">
-        <img alt="Ninja Air Fryer placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgTmluamEgQWlyIEZyeWVyCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Ninja Air Fryer</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Philips+Sonicare&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Philips Sonicare Toothbrush placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgUGhpbGlwcyBTb25pY2FyZSBUb290aGJydXNoCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Philips Sonicare Toothbrush</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=CeraVe+cleanser&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="CeraVe Cleanser placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQ2VyYVZlIENsZWFuc2VyCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">CeraVe Cleanser</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Crest+Whitestrips&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Crest Whitestrips placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQ3Jlc3QgV2hpdGVzdHJpcHMKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Crest Whitestrips</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Blink+Mini&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Blink Mini Security Camera placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQmxpbmsgTWluaSBTZWN1cml0eSBDYW1lcmEKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Blink Mini Security Camera</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Kasa+smart+plug&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="TP-Link Kasa Smart Plug placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgVFAtTGluayBLYXNhIFNtYXJ0IFBsdWcKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">TP-Link Kasa Smart Plug</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Anker+charger&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Anker Fast Charger placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQW5rZXIgRmFzdCBDaGFyZ2VyCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Anker Fast Charger</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=JBL+Bluetooth+speaker&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="JBL Bluetooth Speaker placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgSkJMIEJsdWV0b290aCBTcGVha2VyCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">JBL Bluetooth Speaker</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=LEGO&rh=p_n_feature_browse-bin%3A2656022011&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="LEGO Best Sellers placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgTEVHTyBCZXN0IFNlbGxlcnMKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">LEGO Best Sellers</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Crocs+clogs&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Crocs Clogs placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQ3JvY3MgQ2xvZ3MKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Crocs Clogs</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Carhartt+beanie&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Carhartt Beanie placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQ2FyaGFydHQgQmVhbmllCiAgICAgIDwvdGV4dD4KICAgIDwvc3ZnPg=="/>
-      </div>
-      <div class="content">
-        <h3 class="title">Carhartt Beanie</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Apple+Watch&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Apple Watch (Latest) placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQXBwbGUgV2F0Y2ggKExhdGVzdCkKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Apple Watch (Latest)</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=Kindle+Paperwhite&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Kindle Paperwhite placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgS2luZGxlIFBhcGVyd2hpdGUKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Kindle Paperwhite</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-    <a class="card" href="https://www.amazon.com/s?k=air+purifier&tag=jimmysstore-20" target="_blank" rel="nofollow noopener sponsored">
-      <div class="badge">Top Rated</div>
-      <div class="thumb">
-        <img alt="Air Purifiers Best Sellers placeholder" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIj4KICAgICAgPGRlZnM+CiAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyYjZkIi8+CiAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjFhNDQiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz4KICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAwLDQwMCkiPgogICAgICAgIDxjaXJjbGUgcj0iMjgwIiBmaWxsPSIjMGUxODNhIiBvcGFjaXR5PSIuNjUiLz4KICAgICAgPC9nPgogICAgICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgICBmb250LWZhbWlseT0iU2Vnb2UgVUksIFJvYm90bywgSGVsdmV0aWNhLCBBcmlhbCIgZm9udC1zaXplPSI0NCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2U4ZWNmZiI+CiAgICAgICAgQWlyIFB1cmlmaWVycyBCZXN0IFNlbGxlcnMKICAgICAgPC90ZXh0PgogICAgPC9zdmc+"/>
-      </div>
-      <div class="content">
-        <h3 class="title">Air Purifiers Best Sellers</h3>
-        <div class="meta">Curated for profit • Fast shipping</div>
-      </div>
-    </a>
-    
-  </div>
-</main>
-
-<footer class="footer">
-  <div>As an Amazon Associate we earn from qualifying purchases. &middot; © 2025 Jim & Sherri</div>
-</footer>
+  <footer>
+    <p>&copy; 2025 Jim & Sherri's Store</p>
+    <div class="ace-badge">✅ ACE Approved</div>
+  </footer>
 </body>
 </html>
