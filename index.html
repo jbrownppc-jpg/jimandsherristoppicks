@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jim & Sherri’s Top Picks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #333;
+    }
+
+    .search-bar {
+      margin-top: 10px;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      width: 60%;
+      max-width: 400px;
+      font-size: 1em;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      background-color: #fafafa;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .product-card button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    footer .tribute {
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jim & Sherri’s Top Picks</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." />
+    </div>
+  </header>
+
+  <div class="grid-container">
+    <!-- Product Cards -->
+    <!-- Repeat this block for each product -->
+    <!-- Example for product1.jpg -->
+    <!-- You can update the image filenames and links as needed -->
+    ${[...Array(25)].map((_, i) => `
+      <div class="product-card">
+        <img src="product${i + 1}.jpg" alt="Product ${i + 1}" />
+        <button onclick="window.location.href='https://example.com/product${i + 1}'">View Product</button>
+      </div>
+    `).join('')}
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Jim & Sherri’s Top Picks. All rights reserved.</p>
+    <div class="tribute">Built with love and resilience. Sally, this one’s for you.</div>
+  </footer>
+</body>
+</html>
+
 
