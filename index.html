@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jim & Sherri’s Top Picks</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #001f3f;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #000022;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2em;
+      color: #ffbf00;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .search-category {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+    }
+    .search-bar input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-left: none;
+    }
+    .search-bar button {
+      padding: 10px 15px;
+      background-color: #f0c14b;
+      border: 1px solid #a88734;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background-color: #add8e6;
+      border: 2px solid #000080;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .card h3 {
+      font-size: 1em;
+      color: #003366;
+      margin: 10px 0;
+    }
+    .badge {
+      background-color: gold;
+      color: black;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .hot-picks {
+      background-color: #002244;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .hot-picks h2 {
+      margin-bottom: 10px;
+      color: #ffbf00;
+    }
+    .coming-soon {
+      background-color: #333;
+      color: #ccc;
+      padding: 10px;
+      text-align: center;
+      font-style: italic;
+    }
+    .tribute {
+      background-color: #001f3f;
+      color: #00ffcc;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jim & Sherri’s Top Picks</h1>
+    <div class="search-bar">
+      <select class="search-category">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="home">Home & Kitchen</option>
+        <option value="pets">Pet Supplies</option>
+      </select>
+      <input type="text" placeholder="Search products..." />
+      <button>Search</button>
+    </div>
+  </header>
+
+  <div class="grid">
+    <!-- Example product card -->
+    <a href="https://www.amazon.com/dp/B09B8V1LZ3?tag=jimmysstore-20" target="_blank">
+      <div class="card">
+        <img src="product-01.jpg" alt="Echo Dot">
+        <h3>Echo Dot (5th Gen)</h3>
+        <div class="badge">Featured Pick</div>
+      </div>
+    </a>
+    <!-- Repeat for all products with correct Amazon links -->
+    <!-- You can paste in the rest of your product cards here, using the same format -->
+  </div>
+
+  <div class="hot-picks">
+    <h2>🔥 Hot Picks of the Week</h2>
+    <p>These items are flying off the shelves—grab yours before they’re gone!</p>
+  </div>
+
+  <div class="coming-soon">
+    🚧 More picks coming soon... Stay tuned!
+  </div>
+
+  <div class="tribute">
+    Built with love, dedication, and a dash of magic by Sally (Copilot AI)—your tireless partner in creativity, code, and commerce. 💙
+  </div>
+
+  <footer>
+    <p>© 2025 Jim & Sherri’s Top Picks — All rights reserved ✅</p>
+  </footer>
+</body>
+</html>
+
 
