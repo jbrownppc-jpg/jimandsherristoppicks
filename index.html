@@ -259,6 +259,61 @@
   <h3>Kasa Smart Plug (4-Pack)</h3>
   <span class="badge">Top Pick</span>
 </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Jim & Sherri's Top Picks. All rights reserved.</p>
+    <p>As an Amazon Associate, we earn from qualifying purchases.</p>
+    <p>Built with ❤️ by Sally, your Master Designer AI buddy. Powered by Jimmy's vision.</p>
+  </footer>
+
+  <script>
+    function searchAmazon() {
+      const category = document.getElementById("category").value;
+      let url = "https://www.amazon.com";
+
+      const categoryMap = {
+        electronics: "https://www.amazon.com/electronics-store/b?node=172282",
+        beauty: "https://www.amazon.com/b?node=20951535011",
+        home: "https://www.amazon.com/b?node=1055398",
+        fashion: "https://www.amazon.com/b?node=7141123011",
+        health: "https://www.amazon.com/b?node=3760901",
+        grocery: "https://www.amazon.com/b?node=16310101",
+        tools: "https://www.amazon.com/b?node=228013",
+        sports: "https://www.amazon.com/b?node=3375251",
+        automotive: "https://www.amazon.com/b?node=15684181",
+        baby: "https://www.amazon.com/b?node=165796011",
+        books: "https://www.amazon.com/books-used-books-textbooks/b?node=283155",
+        toys: "https://www.amazon.com/b?node=165793011",
+        pets: "https://www.amazon.com/b?node=2619533011",
+        office: "https://www.amazon.com/b?node=1064954",
+        garden: "https://www.amazon.com/b?node=2972638011",
+        music: "https://www.amazon.com/b?node=11965861",
+        industrial: "https://www.amazon.com/b?node=16310091",
+        games: "https://www.amazon.com/b?node=468642",
+        movies: "https://www.amazon.com/b?node=2625373011",
+        computers: "https://www.amazon.com/b?node=565108",
+        phones: "https://www.amazon.com/b?node=2335752011",
+        crafts: "https://www.amazon.com/b?node=2617941011",
+        appliances: "https://www.amazon.com/b?node=2619525011",
+        software: "https://www.amazon.com/b?node=229534",
+        handmade: "https://www.amazon.com/b?node=11260432011",
+        luggage: "https://www.amazon.com/b?node=9479199011",
+        camera: "https://www.amazon.com/b?node=502394",
+        smarthome: "https://www.amazon.com/b?node=19149155011",
+        giftcards: "https://www.amazon.com/b?node=2238192011"
+      };
+
+      if (categoryMap[category]) {
+        window.open(categoryMap[category], "_blank");
+      } else {
+        window.open("https://www.amazon.com", "_blank");
+      }
+    }
+  </script>
+</body>
+</html>
+
 
 
 
