@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACE Store - Latest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .search-bar {
+      margin-top: 10px;
+    }
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-info h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    .product-info p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .buy-btn {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .buy-btn:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ACE Store</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products...">
+    </div>
+  </header>
+  <main>
+
+    <div class="product-card">
+      <img src="01_echo-dot.jpg" alt="Echo Dot" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Echo Dot</h3>
+        <p>Smart speaker with Alexa.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="02_fire-tv-stick-4k-max.jpg" alt="Fire TV Stick 4K Max" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Fire TV Stick 4K Max</h3>
+        <p>Stream your favorites in 4K.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="03_airpods-pro-2.jpg" alt="AirPods Pro (2nd Gen)" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>AirPods Pro (2nd Gen)</h3>
+        <p>Noise-cancelling wireless earbuds.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="04_kindle-paperwhite.jpg" alt="Kindle Paperwhite" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Kindle Paperwhite</h3>
+        <p>Read anytime with adjustable light.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="05_anker-powercore-10000.jpg" alt="Anker PowerCore 10000" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Anker PowerCore 10000</h3>
+        <p>Portable compact power bank.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="06_instant-pot-duo.jpg" alt="Instant Pot Duo" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Instant Pot Duo</h3>
+        <p>7-in-1 electric pressure cooker.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="07_ninja-air-fryer.jpg" alt="Ninja Air Fryer" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Ninja Air Fryer</h3>
+        <p>Cook with little to no oil.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="08_cerave-lotion.jpg" alt="CeraVe Moisturizing Lotion" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>CeraVe Moisturizing Lotion</h3>
+        <p>Hydrating daily body moisturizer.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="09_apple-watch-se.jpg" alt="Apple Watch SE" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Apple Watch SE</h3>
+        <p>Smartwatch with fitness tracking.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="10_hydro-flask.jpg" alt="Hydro Flask" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Hydro Flask</h3>
+        <p>Insulated stainless steel bottle.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="11_irobot-roomba-i5.jpg" alt="iRobot Roomba i5" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>iRobot Roomba i5</h3>
+        <p>Smart robot vacuum with Wi-Fi.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="12_owala-bottle.jpg" alt="Owala Bottle" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Owala Bottle</h3>
+        <p>Leak-proof water bottle.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="13_kitchenaid-mixer.jpg" alt="KitchenAid Mixer" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>KitchenAid Mixer</h3>
+        <p>Versatile stand mixer for baking.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="14_breville-barista.jpg" alt="Breville Barista" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Breville Barista</h3>
+        <p>Espresso machine with grinder.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="15_ember-mug.jpg" alt="Ember Mug" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Ember Mug</h3>
+        <p>Temperature control smart mug.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="16_yeti-roadie.jpg" alt="Yeti Roadie Cooler" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Yeti Roadie Cooler</h3>
+        <p>Durable portable cooler.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="17_le-creuset-mugs.jpg" alt="Le Creuset Mugs" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Le Creuset Mugs</h3>
+        <p>Premium stoneware mugs.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="18_beast-blender.jpg" alt="Beast Blender" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Beast Blender</h3>
+        <p>Powerful personal blender.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="19_fishwife-anchovies.jpg" alt="Fishwife Anchovies" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Fishwife Anchovies</h3>
+        <p>Gourmet canned anchovies.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="20_hair-growth-serum.jpg" alt="Hair Growth Serum" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Hair Growth Serum</h3>
+        <p>Nourishing scalp treatment.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="21_ring-doorbell.jpg" alt="Ring Video Doorbell" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Ring Video Doorbell</h3>
+        <p>Smart home security doorbell.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="22_smart-bulbs.jpg" alt="Smart Bulbs" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Smart Bulbs</h3>
+        <p>App-controlled LED light bulbs.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="23_blink-camera.jpg" alt="Blink Security Camera" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Blink Security Camera</h3>
+        <p>Indoor/outdoor smart camera.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="24_wireless-charger.jpg" alt="Wireless Charger" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Wireless Charger</h3>
+        <p>Fast charging pad.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <img src="25_smart-plug.jpg" alt="Smart Plug" onerror="this.src='https://via.placeholder.com/300'">
+      <div class="product-info">
+        <h3>Smart Plug</h3>
+        <p>Control devices remotely.</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+    
+  </main>
+</body>
+</html>
+
 
