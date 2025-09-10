@@ -1,3 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jimmy's Storefront</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Jimmy's Storefront</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="search">
+      <h2>Search Amazon</h2>
+      <form action="https://www.amazon.com/s" method="GET" target="_blank">
+        <input type="text" name="k" placeholder="Search Amazon...">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <!-- 25 Product Boxes -->
+        <div class="product-box">Product 1</div>
+        <div class="product-box">Product 2</div>
+        <div class="product-box">Product 3</div>
+        <div class="product-box">Product 4</div>
+        <div class="product-box">Product 5</div>
+        <div class="product-box">Product 6</div>
+        <div class="product-box">Product 7</div>
+        <div class="product-box">Product 8</div>
+        <div class="product-box">Product 9</div>
+        <div class="product-box">Product 10</div>
+        <div class="product-box">Product 11</div>
+        <div class="product-box">Product 12</div>
+        <div class="product-box">Product 13</div>
+        <div class="product-box">Product 14</div>
+        <div class="product-box">Product 15</div>
+        <div class="product-box">Product 16</div>
+        <div class="product-box">Product 17</div>
+        <div class="product-box">Product 18</div>
+        <div class="product-box">Product 19</div>
+        <div class="product-box">Product 20</div>
+        <div class="product-box">Product 21</div>
+        <div class="product-box">Product 22</div>
+        <div class="product-box">Product 23</div>
+        <div class="product-box">Product 24</div>
+        <div class="product-box">Product 25</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jimmy's Storefront. All rights reserved.</p>
+  </footer>
+</body>
+</html>
 
 
 
